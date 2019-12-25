@@ -12,18 +12,23 @@
     <script src="https://kit.fontawesome.com/456fa5acfb.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header id="home">
         <div class="menu">
             <div class="logo" data-aos="fade-right"><img src="./images/logo.png" alt=""></div>
             <nav data-aos="fade-left">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#feature">Features</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#footer">Contact Us</a></li>
                 </ul>
             </nav>
+            <div class="bars">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </div>
         <div class="slider">
             <div class="owl-carsouel" id="cards">
@@ -68,7 +73,7 @@
     </header>
     <main>
         <!-- starting about section -->
-            <div class="about">
+            <div id="about" class="about">
                 <div class="container">
                     <div class="child" id="our" data-aos="fade-right">
                         <h1>About Us</h1>
@@ -83,24 +88,24 @@
             </div>
          <!-- ending about section -->
           <!-- starting about section -->
-          <div class="featurs">
+          <div id="feature" class="featurs">
             <h1>Our Featurs</h1>
             <div class="container">
-                <div class="child2" id="featur" data-aos="flip-left">
+                <div class="child2" data-aos="flip-left">
                     <li class="fas fa-tasks"></li><br>
                     <h4>procedure facilitation</h4>
                 </div>
-                <div class="child2" id="featur" data-aos="flip-left">
+                <div class="child2" data-aos="flip-left">
                     <li class="fa fa-user"></li><br>
                     <h4>Fast Work Accomplishment</h4>
 
                 </div>
-                <div class="child2" id="featur" data-aos="flip-right">
+                <div class="child2" data-aos="flip-right">
                     <li class="far fa-calendar-alt"></li><br>
                     <h4>Accurate in Appointment</h4>
 
                 </div>
-                <div class="child2" id="featur" data-aos="flip-right">
+                <div class="child2" data-aos="flip-right">
                     <li class="fas fa-tag"></li><br>
                     <h4>Suitable Prices</h4>
                 </div>
@@ -154,7 +159,7 @@
             <!-- </div> -->
     </main>
     <footer>
-        <div class="footer">
+        <div id="footer" class="footer">
             <div class="contctUs">
                 <ul>
                     <h3>Contact Info:</h3>
