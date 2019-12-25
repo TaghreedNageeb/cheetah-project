@@ -1,12 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: tahoma;
+    font-family: Montserrat, tahoma;
+    scroll-behavior: smooth;
+}
+header {
+    min-height: 100vh;
+    background: black;
+}
+.menu {
+    height: 60px;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu .logo img {
+    height: 50px;
+    width: 140px;
+}
+.menu nav {
+    width: 50%;
+}
+.menu nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+.card-item {
+    background: #aaa;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+}
+.card-item article {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    font-size: 150%;
+    color: white;
+}
+.owl-prev,
+.owl-next {
+    color: white !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent !important;
+    font-size: 60px !important;
+}
+.owl-prev {
+    left: 20px;
+}
+.owl-next {
+    right: 20px;
+}
+.owl-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card-item img {
+    width: 100%;
+    height: 90vh;
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+.contctUs {
+    width: 40%;
+    padding: 30px;
+    margin: 20px;
+}
+.contctUs li {
+    list-style: none;
+    padding: 7px;
+}
+.email {
+    width: 50%;
+    padding: 30px;
+    margin: 20px;
+}
+.email input,
+.email textarea {
+    height: 40px;
+    width: 100%;
+    margin: 10px auto;
+    border: 1px solid #aaa;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+.email textarea {
+    padding: 10px;
+    height: 150px;
+    resize: none;
+    width: 100%;
+}
+.email button {
+    display: inline-block;
+    padding: 5px 20px;
+    background: orange;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
 }
 
 /* starting about section */
-.container{
+.container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -15,22 +125,21 @@
     justify-items: center;
 }
 
-.child{
+.child {
     width: 600px;
     margin: 30px;
     padding: 20px;
 }
- .about{
-     width: 100%;
-     background-color: #eee;
-     color: #000;
- }
-
- .about img{
+.about {
     width: 100%;
-} 
-/* ending about section */
+    background-color: #eee;
+    color: #000;
+}
 
+.about img {
+    width: 100%;
+}
+/* ending about section */
 /* starting featurs section */
 .child2{
     width: 200px;
@@ -60,3 +169,74 @@
     padding-bottom: 10px;
 } 
 /* ending featurs section */
+/* start services section */
+#services h2 {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 40px;
+    font-weight: 900;
+    padding: 20px 0;
+}
+.grid-2 {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+.image {
+    height: 400px;
+    background: #555;
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+.image:nth-last-of-type(2) {
+    background: #444;
+}
+.image:nth-last-of-type(3) {
+    background: #333;
+}
+.image:nth-last-of-type(4) {
+    background: #222;
+}
+.image article {
+    position: absolute;
+    top: 150%;
+    /* left: 20%; */
+    height: 100%;
+    width: 100%;
+    transition: top 0.7s ease;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 5px;
+}
+.image article h3 {
+    font-size: 30px;
+}
+.image article p {
+    font-size: 15px;
+    margin: 10px auto;
+}
+.image:hover article {
+    top: 0%;
+}
+.image:nth-of-type(1) {
+    background: url("https://www.abacoadvisers.com/sites/default/files/styles/news_main/public/nodes/images/renting-car-spain.jpg?itok=PfpIJyKo");
+    background-size: cover;
+    background-position: center;
+}
+.image:nth-of-type(2) {
+    background: url("https://www.theselfemployed.com/wp-content/uploads/2016/09/car-insurance.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.image:nth-of-type(3) {
+    background: url("https://blg.imgix.net/https%3A%2F%2Fwww.blg-logistics.com%2Fdam%2Fjcr%3Aa8b8e738-2800-4fe6-875c-32a112359801%2Fautomobiletransport_porsche.jpg?auto=format%2Ccompress&ixlib=java-1.1.1&w=1920&s=44f2874376d29437c0b4a3a702cf6dfb");
+    background-size: cover;
+    background-position: center;
+}
+.image:nth-of-type(4) {
+    background: url("https://lavipcarservice.com/wp-content/uploads/2018/11/why-Corporate-Accounts-Business-Travel-With-Luxury-Cars-Service.jpg");
+    background-size: cover;
+    background-position: center;
+}
