@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -13,8 +14,8 @@
 <body>
     <header>
         <div class="menu">
-            <div class="logo"><img src="./images/logo.png" alt=""></div>
-            <nav>
+            <div class="logo" data-aos="fade-right"><img src="./images/logo.png" alt=""></div>
+            <nav data-aos="fade-left">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About Us</a></li>
@@ -69,14 +70,14 @@
         <!-- starting about section -->
             <div class="about">
                 <div class="container">
-                    <div class="child" id="our">
+                    <div class="child" id="our" data-aos="fade-right">
                         <h1>About Us</h1>
                         <p>
                         Chita Car Rental, Logistics and Transport Company was officially established at the Ministry of Trade and Industry, and according to the established system of companies, it was able to form a huge fleet of all types and categories of cars in an attempt to meet all customer requests.
                         </p>
                     </div>
                     <div class="child">
-                        <img src="./img/1.png" alt="cars">
+                        <img data-aos="fade-left" src="./img/1.png" alt="cars">
                     </div>
                 </div>
             </div>
@@ -85,23 +86,22 @@
           <div class="featurs">
             <h1>Our Featurs</h1>
             <div class="container">
-                <div class="child2" id="featur">
+                <div class="child2" id="featur" data-aos="flip-left">
                     <li class="fas fa-tasks"></li><br>
                     <h4>procedure facilitation</h4>
-
                 </div>
-                <div class="child2" id="featur">
-                    <li class="fas fa-user-clock"></li><br>
+                <div class="child2" id="featur" data-aos="flip-left">
+                    <li class="fa fa-user"></li><br>
                     <h4>Fast Work Accomplishment</h4>
 
                 </div>
-                <div class="child2" id="featur">
+                <div class="child2" id="featur" data-aos="flip-right">
                     <li class="far fa-calendar-alt"></li><br>
                     <h4>Accurate in Appointment</h4>
 
                 </div>
-                <div class="child2" id="featur">
-                    <li class="fas fa-money-check-alt"></li><br>
+                <div class="child2" id="featur" data-aos="flip-right">
+                    <li class="fas fa-tag"></li><br>
                     <h4>Suitable Prices</h4>
                 </div>
             </div>
@@ -157,8 +157,9 @@
         <div class="footer">
             <div class="contctUs">
                 <ul>
+                    <h3>Contact Info:</h3>
                     <li ><i class="fas fa-home"></i> SANA'A- Hadda Damascus St</li>
-                    <li><i class="fas fa-phone-alt"></i> +967 7777 268 77</li>
+                    <li><i class="fa fa-phone"></i> +967 7777 268 77</li>
                     <li><i class="fas fa-mobile-alt"></i> +967 1 570321</li>
                     <li><i class="fa fa-fax"></i> +967 1 51 29 26</li>
                     <li><i class="fas fa-envelope-square"></i> info@cheetahye.com</li>
@@ -166,6 +167,7 @@
                 </ul>
             </div>
             <div class="email">
+                <h3>Contact Us</h3>
                 <input type="email" placeholder="Email" ><br>
                 <textarea name="message" id="message" placeholder="Message"></textarea><br>
                 <button id="button" >Send</button>
@@ -178,9 +180,11 @@
             integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
             crossorigin="anonymous"
         ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/jquery-1.11.3.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script>
+        AOS.init();
         $(document).ready(function(){
         $("#cards").owlCarousel({
             items:1,
