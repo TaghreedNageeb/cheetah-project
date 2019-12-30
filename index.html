@@ -112,13 +112,51 @@
             </div>
         </div>
      <!-- ending featurs section -->
-            
+            <div class="model">
+                <header>
+                    <h2>Model Header</h2>
+                    <span>
+                        <i class="fas fa-times"></i>
+                    </span>
+                </header>
+                <article>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium consequuntur quas fugit numquam iusto necessitatibus! Laboriosam, numquam! Natus alias fuga magnam veritatis qui ab harum praesentium suscipit molestias sequi.</p>
+                </article>
+            </div>
             <div class="container"></div>
             <!-- <div class="container"> -->
                 <section id="services">
                     <h2>Our Services</h2>
                     <div class="containers grid-2">
-                      <div class="image">
+                        <div class="service-card">
+                            <img src="https://www.abacoadvisers.com/sites/default/files/styles/news_main/public/nodes/images/renting-car-spain.jpg?itok=PfpIJyKo" alt="">
+                            <article>
+                                <h3>Hello World</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur placeat corrupti libero? Cum, minima earum.</p>
+                            </article>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://www.theselfemployed.com/wp-content/uploads/2016/09/car-insurance.jpg" alt="">
+                            <article>
+                                <h3>Hello World</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur placeat corrupti libero? Cum, minima earum.</p>
+                            </article>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://blg.imgix.net/https%3A%2F%2Fwww.blg-logistics.com%2Fdam%2Fjcr%3Aa8b8e738-2800-4fe6-875c-32a112359801%2Fautomobiletransport_porsche.jpg?auto=format%2Ccompress&ixlib=java-1.1.1&w=1920&s=44f2874376d29437c0b4a3a702cf6dfb" alt="">
+                            <article>
+                                <h3>Hello World</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur placeat corrupti libero? Cum, minima earum.</p>
+                            </article>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://lavipcarservice.com/wp-content/uploads/2018/11/why-Corporate-Accounts-Business-Travel-With-Luxury-Cars-Service.jpg" alt="">
+                            <article>
+                                <h3>Hello World</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur placeat corrupti libero? Cum, minima earum.</p>
+                            </article>
+                        </div>
+                      <!-- <div class="image">
                           <article>
                         <h3>Car Renting</h3>
                         <p>Unique and varied rental services as follows:</p>
@@ -157,7 +195,7 @@
                             <p>3- Annual, monthly, weekly and daily rentals.</p>
                             <p>4- Renting limousines for weddings and events.</p>
                         </article>
-                      </div>
+                      </div> -->
                     </div>
                   </section>
             <!-- </div> -->
@@ -207,6 +245,18 @@
             pagination:true,
             autoPlay:true,
             loop:true
+        });
+
+        $('.service-card').each(function(i){
+            $(this).click(function(){
+                console.log($('.menu li').eq(i))
+                $('.model article').html(this.querySelector('article').innerHTML)
+                $('.model').fadeIn('slow');
+            });
+        });
+
+        $('.model header span').click(function(){
+            $('.model').fadeOut('slow');
         });
     });
     </script>
