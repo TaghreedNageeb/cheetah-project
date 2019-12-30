@@ -16,3 +16,23 @@ links.forEach(function(link) {
     bars.classList.remove("cross");
   });
 });
+
+//array
+let content= [
+  {title: 'Car Rental',
+  body: `Unique and varied rental services as follows:
+  1- Car rental for foreign and local organizations, institutions, companies and ministries.
+  2- Car rental for businessmen and VIPs.
+  3- Annual, monthly, weekly and daily rentals.
+  4- Renting limousines for weddings and events.`},
+  {title:'Insurance',
+  body:'The company is committed to insuring all of its cars through the largest insurance companies in the country'},
+  {title: 'Car Rental',
+  body: `Unique and varied rental services as follows:
+  1- Car rental for foreign and local organizations, institutions, companies and ministries.
+  2- Car rental for businessmen and VIPs.
+  3- Annual, monthly, weekly and daily rentals.
+  4- Renting limousines for weddings and events.`},
+  {title:'Insurance',
+  body:'The company is committed to insuring all of its cars through the largest insurance companies in the country'}
+]
