@@ -41,11 +41,11 @@ let content = [
     imgUrl:
       "https://blg.imgix.net/https%3A%2F%2Fwww.blg-logistics.com%2Fdam%2Fjcr%3Aa8b8e738-2800-4fe6-875c-32a112359801%2Fautomobiletransport_porsche.jpg?auto=format%2Ccompress&ixlib=java-1.1.1&w=1920&s=44f2874376d29437c0b4a3a702cf6dfb",
     title: "Car Rental",
-    body: `Unique and varied rental services as follows:
-  1- Car rental for foreign and local organizations, institutions, companies and ministries.
-  2- Car rental for businessmen and VIPs.
-  3- Annual, monthly, weekly and daily rentals.
-  4- Renting limousines for weddings and events.`
+    body: `<p>Unique and varied rental services as follows:</p>
+  <p>1- Car rental for foreign and local organizations, institutions, companies and ministries.</p>
+  <p>2- Car rental for businessmen and VIPs.</p>
+  <p>3- Annual, monthly, weekly and daily rentals.</p>
+  <p>4- Renting limousines for weddings and events.</p>`
   },
   {
     imgUrl:
@@ -63,12 +63,26 @@ content.forEach(function(item) {
   img.src = item.imgUrl;
   let article = document.createElement("article");
   let title = document.createElement("h3");
-  title.innerHTML = item.title.slice(0, 30);
+  title.innerHTML = item.title;
   let body = document.createElement("p");
-  body.innerHTML = item.body;
+  // body.innerHTML = item.body.toString().substring(0, 50);
   article.appendChild(title);
   article.appendChild(body);
   div.appendChild(img);
   div.appendChild(article);
   services.appendChild(div);
+});
+
+$(".service-card").each(function(i) {
+  $(this).click(function() {
+    console.log($(".menu li").eq(i));
+    $(".model header h2").html(content[i].title);
+    $(".model article").html(content[i].body);
+    // $('.model article').html(this.querySelector('article').innerHTML)
+    $(".model").fadeIn("slow");
+  });
+});
+
+$(".model header span").click(function() {
+  $(".model").fadeOut("slow");
 });

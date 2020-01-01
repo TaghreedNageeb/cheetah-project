@@ -247,17 +247,6 @@
             loop:true
         });
 
-        $('.service-card').each(function(i){
-            $(this).click(function(){
-                console.log($('.menu li').eq(i))
-                $('.model article').html(this.querySelector('article').innerHTML)
-                $('.model').fadeIn('slow');
-            });
-        });
-
-        $('.model header span').click(function(){
-            $('.model').fadeOut('slow');
-        });
     });
     </script>
     <script src="./js/script.js"></script>
