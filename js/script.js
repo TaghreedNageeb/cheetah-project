@@ -24,11 +24,11 @@ let content = [
     imgUrl:
       "https://www.abacoadvisers.com/sites/default/files/styles/news_main/public/nodes/images/renting-car-spain.jpg?itok=PfpIJyKo",
     title: "Car Rental",
-    body: `Unique and varied rental services as follows:
-  1- Car rental for foreign and local organizations, institutions, companies and ministries.
-  2- Car rental for businessmen and VIPs.
-  3- Annual, monthly, weekly and daily rentals.
-  4- Renting limousines for weddings and events.`
+    body: `<p>Unique and varied rental services as follows:</p>
+  <p>1- Car rental for foreign and local organizations, institutions, companies and ministries.</p>
+  <p>2- Car rental for businessmen and VIPs.</p>
+  <p>3- Annual, monthly, weekly and daily rentals.</p>
+  <p>4- Renting limousines for weddings and events.</p>`
   },
   {
     imgUrl:
@@ -59,18 +59,26 @@ let content = [
 content.forEach(function(item) {
   let div = document.createElement("div");
   div.className = "service-card";
+  let front = document.createElement("div");
+  front.className = "front";
   let img = document.createElement("img");
   img.src = item.imgUrl;
   let article = document.createElement("article");
   let title = document.createElement("h3");
   title.innerHTML = item.title;
   let body = document.createElement("p");
-  // body.innerHTML = item.body.toString().substring(0, 50);
-  article.appendChild(title);
+  body.innerHTML = item.body.toString();
+  front.appendChild(img);
+  front.appendChild(title);
+  div.appendChild(front);
   article.appendChild(body);
-  div.appendChild(img);
   div.appendChild(article);
-  services.appendChild(div);
+  // services.appendChild(div);
+
+  // div.appendChild(img);
+  // div.appendChild(title);
+  // div.appendChild(article);
+  // services.appendChild(div);
 });
 
 $(".service-card").each(function(i) {
@@ -85,4 +93,17 @@ $(".service-card").each(function(i) {
 
 $(".model header span").click(function() {
   $(".model").fadeOut("slow");
+});
+
+var cards = document.querySelectorAll(".card");
+cards.forEach(function(card) {
+  // card.classList.remove("is-flipped");
+  card.addEventListener("click", function() {
+    if (!card.classList.contains("is-flipped")) {
+      for (let i = 0; i < cards.length; i++) {
+        cards[i].classList.remove("is-flipped");
+      }
+    }
+    card.classList.toggle("is-flipped");
+  });
 });
