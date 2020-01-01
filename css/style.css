@@ -344,6 +344,7 @@ header {
   margin: 40px 0;
   perspective: 600px; */
   height: 350px;
+  perspective: 1000px;
 }
 
 .card {
