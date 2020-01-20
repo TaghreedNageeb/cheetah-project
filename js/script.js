@@ -106,4 +106,11 @@ cards.forEach(function(card) {
     }
     card.classList.toggle("is-flipped");
   });
+  $(document).scroll(function() {
+    if ($(this).scrollTop() > 10) {
+      $(".menu").addClass("fixed-menu");
+    } else {
+      $(".menu").removeClass("fixed-menu");
+    }
+  });
 });
